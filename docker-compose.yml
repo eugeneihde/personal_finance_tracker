@@ -1,0 +1,33 @@
+version: '3.8'
+
+services:
+  nextjs:
+    build: .
+    ports:
+      - '3000:3000'
+    depends_on:
+      - mysql
+    volumes:
+      - .:/app
+    networks:
+      - frontend-network
+    command: sh -c "npm run dev"
+
+  mysql:
+    image: mysql:8.0
+    ports:
+      - '3306:3306'
+    command: ["mysqld", "--init-file=/docker-entrypoint-initdb.d/init.sql"]
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+    volumes:
+      - mysql-data:/var/lib/mysql
+      - ./docker-entrypoint-initdb.d:/docker-entrypoint-initdb.d
+    networks:
+      - frontend-network
+
+volumes:
+  mysql-data:
+
+networks:
+  frontend-network:

@@ -1,0 +1,46 @@
+{
+  "name": "personal_finance_tracker",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
+  },
+  "dependencies": {
+    "@emotion/react": "^11.11.4",
+    "@emotion/styled": "^11.11.5",
+    "@mui/icons-material": "^5.15.21",
+    "@mui/material": "^5.15.20",
+    "axios": "^1.7.2",
+    "bcryptjs": "^2.4.3",
+    "date-fns": "^3.6.0",
+    "dotenv": "^16.4.5",
+    "mysql2": "^3.10.1",
+    "next": "14.2.4",
+    "next-auth": "^4.24.7",
+    "react": "^18.3.1",
+    "react-date-range": "^2.0.1",
+    "react-dom": "^18",
+    "react-loader-spinner": "^6.1.6",
+    "react-toastify": "^10.0.5",
+    "sequelize": "^6.37.3",
+    "sequelize-typescript": "^2.1.6",
+    "tls": "^0.0.1",
+    "ts-node": "^10.9.2"
+  },
+  "devDependencies": {
+    "@types/bcryptjs": "^2.4.6",
+    "@types/node": "^20.14.9",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "@types/sequelize": "^4.28.20",
+    "eslint": "^8.57.0",
+    "eslint-config-next": "^14.2.4",
+    "identity-obj-proxy": "^3.0.0",
+    "typescript": "^5.5.2"
+  }
+}
