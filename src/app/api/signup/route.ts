@@ -22,7 +22,7 @@ export const POST = async (req: NextRequest): Promise<NextResponse> => {
       }
     )
 
-    return NextResponse.json(response, { status: response.status })
+    return NextResponse.json({}, { status: response.status })
   } catch (error) {
     return NextResponse.json({ error: 'Signup failed!', details: error }, { status: 500 })
   }

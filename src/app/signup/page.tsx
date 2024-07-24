@@ -34,7 +34,6 @@ const SignupPage = () => {
     setShowSignupError(false)
     setSignupErrorMessage('')
 
-    // @todo: fix redirect after login not working - false response (Signup failed! -> 500)
     try {
       const response = await axios.post('/api/signup', { displayName, username, password })
 

@@ -29,7 +29,7 @@ export const POST = async (req: NextRequest): Promise<NextResponse> => {
       currency: 'dollar'
     })
 
-    return NextResponse.json({ id: newUser.id, displayName: displayName, username: newUser.username }, { status: 200 })
+    return NextResponse.json({}, { status: 200 })
   } catch (error) {
     return NextResponse.json({ error: 'Error while creating User!', details: error }, { status: 500 })
   }
